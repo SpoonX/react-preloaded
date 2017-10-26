@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import ImageHelper from './ImageHelper';
 
@@ -7,7 +7,7 @@ const propTypes = {
     children: PropTypes.element.isRequired,
 
     // Rendered during load
-    loadingIndicator: PropTypes.node.isRequired,
+    loadingIndicator: PropTypes.node,
 
     // Array of image urls to be preloaded
     images: PropTypes.array,
@@ -33,6 +33,9 @@ const propTypes = {
 
 const defaultProps = {
     images: [],
+    autoResolveDelay: 0,
+    onError: null,
+    onSuccess: null,
     resolveOnError: true,
     mountChildren: true,
     loadingIndicator: null,
@@ -65,7 +68,10 @@ class Preload extends Component {
                 .then(this._handleSuccess, this._handleError);
 
             if (this.props.autoResolveDelay && this.props.autoResolveDelay > 0) {
-                this.autoResolveTimeout = setTimeout(this._handleSuccess, this.props.autoResolveDelay);
+                this.autoResolveTimeout = setTimeout(
+                    this._handleSuccess,
+                    this.props.autoResolveDelay,
+                );
             }
         }
     }
@@ -97,8 +103,7 @@ class Preload extends Component {
     }
 
     _handleError(err) {
-
-        if(!this._mounted) {
+        if (!this._mounted) {
             return;
         }
 
@@ -112,7 +117,9 @@ class Preload extends Component {
     }
 
     render() {
-        return (this.state.ready && this.props.mountChildren ? this.props.children : this.props.loadingIndicator);
+        return this.state.ready && this.props.mountChildren
+            ? this.props.children
+            : this.props.loadingIndicator;
     }
 }
 
