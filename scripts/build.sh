@@ -8,7 +8,7 @@ babel=node_modules/.bin/babel
 
 rm -rf $build_dir
 
-echo "Building react-preload"
+echo "Building react-preloaded"
 
 echo "Transpile modules"
 $babel ./modules -d $build_dir

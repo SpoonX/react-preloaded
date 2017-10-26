@@ -1,5 +1,5 @@
 import React from 'react';
-import Preload from 'react-preload';
+import Preload from 'react-preloaded';
 import Spinner from './Spinner';
 
 const imgBase = 'https://api.fnkr.net/testimg/800x600/00CED1/FFF/?';

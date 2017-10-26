@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = [{
   devtool: 'eval',
   entry: {
-    'react-preload': './modules/index',
+    'react-preloaded': './modules/index',
     'examples': './examples/src/index',
   },
   output: {
@@ -16,7 +16,7 @@ module.exports = [{
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',
-    'react-preload': 'ReactPreload',
+    'react-preloaded': 'ReactPreload',
   },
   module: {
     loaders: [{

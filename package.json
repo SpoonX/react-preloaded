@@ -1,47 +1,50 @@
 {
-  "name": "react-preload",
-  "version": "0.5.1",
-  "description": "A component to manage preloading media before showing a component",
-  "main": "lib/index.js",
-  "scripts": {
-    "build": "./scripts/build.sh",
-    "test": "./node_modules/.bin/eslint -c .eslintrc modules/*",
-    "prepublish": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:sambernard/react-preload.git"
-  },
-  "keywords": [
-    "react",
-    "preload",
-    "preloader",
-    "loader",
-    "react-component"
-  ],
-  "author": "Sam Bernard <sambernard@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/sambernard/react-preload/issues"
-  },
-  "homepage": "https://github.com/sambernard/react-preload",
-  "peerDependencies": {
-    "react": ">=15.0.0",
-    "react-dom": ">=15.0.0"
-  },
-  "dependencies": {
-    "prop-types": "^15.5.10"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.11.4",
-    "babel-eslint": "^6.1.2",
-    "babel-loader": "^6.2.5",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-react": "6.11.1",
-    "babel-preset-stage-2": "^6.13.0",
-    "eslint": "1.10.3",
-    "eslint-config-airbnb": "^10.0.1",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
-  }
+    "name"            : "react-preloaded",
+    "version"         : "1.0.0",
+    "description"     : "Show a placeholder while images are being preloaded.",
+    "main"            : "lib/index.js",
+    "scripts"         : {
+        "build"     : "./scripts/build.sh",
+        "test"      : "./node_modules/.bin/eslint -c .eslintrc modules/*",
+        "prepublish": "npm run build"
+    },
+    "repository"      : {
+        "type": "git",
+        "url" : "git@github.com:spoonx/react-preloaded.git"
+    },
+    "keywords"        : [
+        "react",
+        "preload",
+        "preloader",
+        "loader",
+        "react-component"
+    ],
+    "contributors"    : [
+        "Sam Bernard <sambernard@gmail.com>"
+    ],
+    "author"          : "Wesley Overdijk <r.w.overdijk@gmail.com>",
+    "license"         : "MIT",
+    "bugs"            : {
+        "url": "https://github.com/spoonx/react-preloaded/issues"
+    },
+    "homepage"        : "https://github.com/spoonx/react-preloaded",
+    "peerDependencies": {
+        "react"    : ">=15.0.0",
+        "react-dom": ">=15.0.0"
+    },
+    "dependencies"    : {
+        "prop-types": "^15.5.10"
+    },
+    "devDependencies" : {
+        "babel-cli"           : "^6.11.4",
+        "babel-eslint"        : "^6.1.2",
+        "babel-loader"        : "^6.2.5",
+        "babel-preset-es2015" : "^6.13.2",
+        "babel-preset-react"  : "6.11.1",
+        "babel-preset-stage-2": "^6.13.0",
+        "eslint"              : "1.10.3",
+        "eslint-config-airbnb": "^10.0.1",
+        "webpack"             : "^1.13.1",
+        "webpack-dev-server"  : "^1.14.1"
+    }
 }

@@ -1,7 +1,9 @@
 # React Preload
-[![npm version](https://badge.fury.io/js/react-preload.svg)](http://badge.fury.io/js/react-preload)
+[![npm version](https://badge.fury.io/js/react-preloaded.svg)](http://badge.fury.io/js/react-preloaded)
 
 A React component to preload images. It renders a passed component during the loader phase, and renders it's children once the images have been successfully fetched.
+
+This repository was forked from [Sam Bernard](https://github.com/sambernard/react-preload).
 
 
 ## Installation
@@ -9,13 +11,13 @@ A React component to preload images. It renders a passed component during the lo
 ### npm
 
 ```bash
-npm install react-preload --save
+npm install react-preloaded --save
 ```
 
 ## Usage
 
 ```javascript
-var Preload = require('react-preload').Preload;
+var Preload = require('react-preloaded').Preload;
 ```
 
 ```javascript
@@ -71,8 +73,8 @@ var images = [];
 ## Additional Details
 
 This module also exposes `ImageCache` and `ImageHelper` which can be used to preload images
-directly, and can be accessed via `require('react-preload').ImageCache` and
-`require('react-preload').ImageHelper` respectively.
+directly, and can be accessed via `require('react-preloaded').ImageCache` and
+`require('react-preloaded').ImageHelper` respectively.
 
 ## License
 
